@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #D9D9D9;
+}
+
+section.apresentacao-login > p {
+  color: #FFF;
+  text-align: center;
+  font-family: Lexend;
+  font-size: 2.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.img-logo {
+  width: 31.25rem;
+  height: 16.125rem;
+}
+
+input.senha, input.email {
+  width: 29.1875rem;
+  height: 4.375rem;
+  flex-shrink: 0;
+  font-family: Lexend;
+  border-radius: 0.9375rem;
+  border: 1px solid #000;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: #D9D9D9;
+}
+
+input.senha::placeholder, input.email::placeholder {
+  color: #000;
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.logo-cabecalho {
+  width: 6.5rem;
+  height: 5.5rem;
+}
+
+.btn-login {
+  width: 29.1875rem;
+  height: 4.5625rem;
+  background-color: #0B002C;
+  color: #FFF8F8;
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn-login:hover, .btn-login:focus, .barra-navegacao {
+  background-color: #0B002C !important;
+}
+
+.navbar-collapse a {
+  color: #FFF;
+  text-align: center;
+  font-family: Graduate;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+section.bem-vindo, section.destaque > h2 {
+  background-color: #0B002C;
+}
+
+.fotos-destaque > div {
+  width: 23.125rem;
+  height: 21.77388rem;
+  flex-shrink: 0;
+}
+
+.destaque > h2 {
+  width: 29.6875rem;
+  height: 4.09044rem;
+}
+
+.text-azul {
+  color: #0B002C;
+}
+
+.bg-azul {
+  background-color: #0B002C;
+}
+
+.padre-cicero {
+  background-image: url("../img/Rectangle 29.png");
+  background-repeat: no-repeat;
+}
+
+.dandara {
+  background-image: url("../img/Recriando_Imagens_Dandara_dos_Palmares_frontal_portrait 1.png");
+  background-repeat: no-repeat;
+}
+
+.machado-de-assis {
+  background-image: url("../img/Recriando_Imagens_Machado_de_Assis_frontal_portrait 3.png");
+  background-repeat: no-repeat;
+}
+
+.faces-reconstruidas > h1 {
+  width: 28.75rem;
+  height: 3.375rem;
+  color: #FFF;
+  text-align: center;
+  font-family: Lexend;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.padre-cicero-reconstruido, .dandara-reconstruida, .machado-de-assis-reconstruido {
+  width: 23.4375rem;
+  height: 38.5625rem;
+}
+
+.reflexao > h1 {
+  width: 28.75rem;
+  flex-shrink: 0;
+}
+
+.padre-cicero-reconstruido {
+  background-image: url("../img/Recriando_Imagens_Padre_Cicero_frontal_portrait._Hyper_realism 2.png");
+  background-repeat: no-repeat;
+}
+
+.dandara-reconstruida {
+  background-image: url("../img/Recriando_Imagens_Dandara_dos_Palmares_frontal_portrait 2.png");
+  background-repeat: no-repeat;
+}
+
+.machado-de-assis-reconstruido {
+  background-image: url("../img/Recriando_Imagens_Machado_de_Assis_frontal_portrait 2.png");
+}
+
+.detalhe > h1 {
+  max-width: 28.75rem;
+  height: 3.375rem;
+}
+
+.card-ocucacao {
+  width: 31.375rem;
+  height: 22.0625rem;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .faces-reconstruidas > h1 {
+    width: auto !important;
+  }
+}

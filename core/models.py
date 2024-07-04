@@ -7,7 +7,7 @@ class Faces(models.Model):
     ocupacao = models.CharField(max_length=100)
     data_nascimento = models.DateField()
     data_falecimento = models.DateField()
-    imagem = models.ImageField(upload_to='uploads/%y%y%y%y/%m%m/%d%d')
+    imagem = models.ImageField(upload_to='uploads/')
     postado_por = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:

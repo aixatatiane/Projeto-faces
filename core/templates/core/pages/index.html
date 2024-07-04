@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "core/partials/head.html" %}
+<body>
+  <header class="d-flex align-items-center">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary barra-navegacao w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo_sem_nome.svg" alt="" style="width: 6.5rem; height: 5.5rem;">
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bg-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+            <li class="nav-item text-white mx-xl-5">
+              <a class="nav-link active text-white fs-3" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item text-white me-xl-5">
+              <a class="nav-link active text-white fs-3" aria-current="page" href="./faces_reconstruidas.html">Imagens</a>
+            </li>
+            <li class="nav-item text-white me-xl-5">
+              <a class="nav-link active text-white fs-3" aria-current="page" href="./reflexao.html">Reflexão Filosófica</a>
+            </li>
+            <li class="nav-item text-white me-xl-5">
+              <a class="nav-link active text-white fs-3" aria-current="page" href="./detalhe.html">História</a>
+            </li>
+            <li class="nav-item text-white me-xl-5">
+              <a class="nav-link active text-white fs-3" aria-current="page" href="./sobre-nos.html">Organizadores</a>
+            </li>
+            <li class="nav-item text-white me-xl-5">
+              <a class="nav-link active text-white fs-3" aria-current="page" href="./login.html">Login</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">
+              <img src="./img/search.svg" alt="" srcset="">
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid p-0 detalhe">
+    <h1 class="text-white fw-bold fs-1 p-5 pt-2 bg-azul my-5" style="height: 3.375rem; background: #0B002C;">História</h1>
+    <section class="row justify-content-center align-items-end w-100 m-0 mt-5">
+      <div class="col-10 d-flex flex-column align-items-center flex-lg-row justify-content-center bg-azul rounded-5 mb-5">
+        <div class="d-flex flex-column align-items-center p-lg-5">
+          <img src="./img/Recriando_Imagens_Machado_de_Assis_frontal_portrait 2.png" class="w-100" alt="">
+          <div class="bg-white p-5 text-black border-4 card-ocupacao mt-5" style="width: 18.5625rem; border-radius: 1.25rem; background: #D9D9D9;">
+            <h2 class="fw-normal">Ocupação</h2>
+            <p>Data de Nascimento </p>
+            <h2 class="fw-normal">Data de nascimento</h2>
+            <p>21/06/1839 </p>
+            <h2 class="fw-normal">Data da morte</h2>
+            <p>29/09/1908 (aos 69) </p>
+          </div>
+        </div>
+        <div class="text-white p-5 d-flex flex-column align-items-center justify-content-center">
+          <h1 class="text-white fw-bold fs-1 mb-5">Machado de Assis</h1>
+          <p class="fs-4">
+            Foi um importante escritor brasileiro do século XIX, conhecido por seu realismo e simbolismo. Nascido em 1839 no Rio de Janeiro, teve uma origem humilde e autodidata. Tornou-se membro da Academia Brasileira de Letras e escreveu obras-primas como "Memórias Póstumas de Brás Cubas," "Quincas Borba," e "Dom Casmurro." Sua escrita única e refinada abordava temas como a natureza humana e a sociedade. Além de escritor, foi crítico literário e funcionário público. Faleceu em 1908, mas seu legado literário continua a influenciar gerações de escritores.
+          </p>
+          <p class="fs-4">
+            A primeira vez em que o Bruxo do Cosme Velho foi tratado como branco foi em sua morte. O obituário do escritor, que faleceu em 1908, o classifica como “branco”, enquanto sua máscara mortuária possui claros traços que se associam a características de afro-brasileiros. Depois, com a fama do autor e disseminação de obras durante a República Velha, sua imagem foi reproduzida de maneira embranquecida.
+          </p>
+          <p class="fs-4">
+            “O maior escritor da literatura brasileira era um homem negro”, reiterou Ana Flávia Magalhães Pinto, da UnB. A batalha narrativa pela representação da pele de Machado tem grande peso, principalmente por incluir entre os fatores a forte herança do racismo do século 20.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
