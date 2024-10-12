@@ -1,30 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 {% include "core/partials/head.html" %}
 <body>
   {% include "core/partials/header.html" %}
   <main class="container-fluid pt-5">
     <section class="faces-reconstruidas">
-      <h1 class="text-white p-md-2 pb-md-4 me-0 bg-azul">Faces Reconstruidas</h1>
-      <div class="row justify-content-center justify-content-md-around card-faces">
-        <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center justify-content-center">
-          <div class="padre-cicero-reconstruido mt-5 mt-lg-0"></div>
-          <h2 class="fw-semibold">Padre Cícero (1844-1934)</h2>
-          <a href="./img/Recriando_Imagens_Padre_Cicero_frontal_portrait._Hyper_realism 2.png" download class="bg-azul text-white text-center fw-semibold fs-3 p-3 rounded-3 text-decoration-none">Salvar</a>
-          <a href="./detalhe.html" class="bg-azul text-white text-center fw-semibold text-decoration-none fs-3 p-3 rounded-3 mt-3">História</a>
-        </div>
-        <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center justify-content-center">
-          <div class="dandara-reconstruida mt-5 mt-lg-0"></div>
-          <h2 class="fw-semibold">Dandara dos Palmares (1654-1694)</h2>
-          <a href="./img/Recriando_Imagens_Dandara_dos_Palmares_frontal_portrait 2.png" download class="bg-azul text-white text-center fw-semibold fs-3 p-3 rounded-3 text-decoration-none">Salvar</a>
-          <a href="./detalhe.html" class="bg-azul text-white text-center fw-semibold text-decoration-none fs-3 p-3 rounded-3 mt-3">História</a>
-        </div>
-        <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center justify-content-center">
-          <div class="machado-de-assis-reconstruido mt-5 mt-lg-0"></div>
-          <h2 class="fw-semibold">Machado de Assis (1839-1908)</h2>
-          <a href="./img/Recriando_Imagens_Machado_de_Assis_frontal_portrait 2.png" download class="bg-azul text-white text-center fw-semibold fs-3 p-3 rounded-3 text-decoration-none">Salvar</a>
-          <a href="./detalhe.html" class="bg-azul text-white text-center fw-semibold text-decoration-none fs-3 p-3 rounded-3 mt-3">História</a>
+      <div class="container">
+        <h1 class="text-white p-md-2 pb-md-4 me-0 bg-azul text-center">Faces Reconstruídas</h1>
+        <div class="row justify-content-center justify-content-md-around card-faces mt-5">
+          <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center text-center">
+            <div class="padre-cicero-reconstruido mt-5 mt-lg-0"></div>
+            <h2 class="fw-semibold mt-3">Padre Cícero (1844-1934)</h2>
+            <a href="{% static 'img/Recriando_Imagens_Padre_Cicero_frontal_portrait._Hyper_realism 2.png' %}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
+            <a href="./detalhe.html" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
+          </div>
+          <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center text-center">
+            <div class="dandara-reconstruida mt-5 mt-lg-0"></div>
+            <h2 class="fw-semibold mt-3">Dandara dos Palmares (1654-1694)</h2>
+            <a href="{% static 'img/Recriando_Imagens_Dandara_dos_Palmares_frontal_portrait 2.png' %}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
+            <a href="./detalhe.html" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
+          </div>
+          <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center text-center">
+            <div class="machado-de-assis-reconstruido mt-5 mt-lg-0"></div>
+            <h2 class="fw-semibold mt-3">Machado de Assis (1839-1908)</h2>
+            <a href="{% static 'img/Recriando_Imagens_Machado_de_Assis_frontal_portrait 2.png' %}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
+            <a href="./detalhe.html" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,59 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
-</head>
+<html lang="pt-BR">
+{% include "core/partials/head.html" %}
 <body>
-  <header class="d-flex align-items-center">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary barra-navegacao w-100">
-      <div class="container-fluid">
-        <a class="navbar-brand " href="#">
-          <img src="./img/logo_sem_nome.svg" alt="" style="width: 6.5rem; height: 5.5rem;">
-        </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon bg-light"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-            <li class="nav-item text-white mx-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./faces_reconstruidas.html">Imagens</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./reflexao.html">Reflexão Filosófica</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./detalhe.html">História</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./sobre-nos.html">Organizadores</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./login.html">Login</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">
-              <img src="./img/search.svg" alt="" srcset="">
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
+  {% include "core/partials/header.html" %}
+
   <main class="container-fluid pt-5">
     <section class="row reflexao">
-      <h1 class="text-white mb-5 py-3 bg-azul">Reflexão Filosófica</h1>
+      <h1 class="text-white mb-5 py-3 bg-azul text-center">Reflexão Filosófica</h1>
       <div class="p-5 bg-azul">
-        <p class="text-white text-center fs-3">Vocês já se perguntaram o porquê de figuras importantes na história brasileira não são homenageadas, tampouco citadas na atualidade?</p>
-        <p class="text-white text-center fs-3">Pessoas que contribuiram significativamente para o Brasil merecem respaldo, pois apagando a história dessas pessoas, consequentemente estaremos apagando nossas próprias histórias e o nosso passado. Outra problemática é o apagamento histórico e epistêmico que gera uma supressão, principalmente de personalidades negras importantes na literatura, filosofia, ciência, artes, política, saúde e etc. Isso reflete também, em uma extinção visual, onde não encontramos fotografias e algumas que são encontradas passaram pelo processo de branqueamento racial, que consiste em clarear a imagem de pessoas negras. Nessa perspectiva, a reconstrução das fotografias será um meio de trazer à tona essas discursões e dar mais vizibilidade à essas personalidades. É importante salientar que as imagens aqui ofertadas não são documentos históricos, mas criações imaginativas que possuem valor político e contribuiem para a formação de uma memória coletiva mais inclusiva.</p>
+        <p class="text-white text-center fs-3">Vocês já se perguntaram o porquê de figuras importantes na história brasileira não serem homenageadas, tampouco citadas na atualidade?</p>
+        <p class="text-white text-center fs-3">Pessoas que contribuíram significativamente para o Brasil merecem respaldo, pois apagando a história dessas pessoas, consequentemente estaremos apagando nossas próprias histórias e o nosso passado. Outra problemática é o apagamento histórico e epistêmico que gera uma supressão, principalmente de personalidades negras importantes na literatura, filosofia, ciência, artes, política, saúde e etc. Isso reflete também, em uma extinção visual, onde não encontramos fotografias e algumas que são encontradas passaram pelo processo de branqueamento racial, que consiste em clarear a imagem de pessoas negras. Nessa perspectiva, a reconstrução das fotografias será um meio de trazer à tona essas discursões e dar mais visibilidade a essas personalidades. É importante salientar que as imagens aqui ofertadas não são documentos históricos, mas criações imaginativas que possuem valor político e contribuem para a formação de uma memória coletiva mais inclusiva.</p>
       </div>
     </section>
   </main>

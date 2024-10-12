@@ -1,89 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
-</head>
+<html lang="pt-BR">
+{% include 'core/partials/head.html' %}
 <body>
-  <header class="d-flex align-items-center">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary barra-navegacao w-100">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./img/logo_sem_nome.svg" alt="" style="width: 6.5rem; height: 5.5rem;">
-        </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon bg-light"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-            <li class="nav-item text-white mx-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./faces_reconstruidas.html">Imagens</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./reflexao.html">Reflexão Filosófica</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./detalhe.html">História</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./sobre-nos.html">Organizadores</a>
-            </li>
-            <li class="nav-item text-white me-xl-5">
-              <a class="nav-link active text-white fs-3" aria-current="page" href="./login.html">Login</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">
-              <img src="./img/search.svg" alt="" srcset="">
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
+  {% include 'core/partials/header.html' %}
+
   <main class="container-fluid p-0">
     <section class="row w-100 flex-column flex-lg-row align-items-center m-0">
-      <div class="col-12 col-md w-100 p-0 vh-100 w-50 bg-azul pt-5">
+      <div class="col-12 col-md-6 p-0 vh-100 bg-azul pt-5">
         <h1 class="text-center text-white fw-bold mb-5">Membros</h1>
-        <div class="sobre-nos d-flex justify-content-evenly my-3">
-          <div class="abinadabe d-flex flex-column align-items-center">
-            <img src="./img/abindabe.png" alt="">
-            <h2 class="text-white">Abinadabe Araújo</h2>
+        <div class="d-flex justify-content-evenly my-3">
+          <div class="d-flex flex-column align-items-center">
+            <img src="{% static 'core/img/tatiane.png' %}" alt="Foto de Aixa Tatiane" class="img-fluid rounded-circle">
+            <h2 class="text-white mt-3">Aixa Tatiane</h2>
           </div>
-          <div class="tatiane d-flex flex-column align-items-center">
-            <img src="./img/tatiane.png" alt="">
-            <h2 class="text-white">Aixa Tatiane</h2>
-          </div>
-        </div>
-        <div class="sobre-nos d-flex justify-content-evenly my-3">
-          <div class="avala d-flex flex-column align-items-center">
-            <img src="./img/avala 1.png" class="m-auto" alt="">
-            <h2 class="text-white">Ávala Camile</h2>
-          </div>
-          <div class="vitoria d-flex flex-column align-items-center">
-            <img src="./img/vitoria 1.png" alt="">
-            <h2 class="text-white">Maria Vitória</h2>
-          </div>
-        </div>
-        <div class="sobre-nos d-flex justify-content-evenly my-3">
-          <div class="nicolas d-flex flex-column align-items-center">
-            <img src="./img/nicolas.png" alt="">
-            <h2 class="text-white">Nicolas Fernades</h2>
-          </div>
-          <div class="rian d-flex flex-column align-items-center">
-            <img src="./img/rian.png" alt="">
-            <h2 class="text-white">Rian Henrique</h2>
+          <div class="d-flex flex-column align-items-center">
+            <img src="{% static 'core/img/rian.png' %}" alt="Foto de Rian Henrique" class="img-fluid rounded-circle">
+            <h2 class="text-white mt-3">Rian Henrique</h2>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md p-0 w-100 vh-100 w-50">
+      <div class="col-12 col-md-6 p-0 vh-100 d-flex flex-column justify-content-center">
         <div class="d-flex justify-content-end p-5 pe-0">
           <h4 class="p-3 ps-5 bg-azul text-white fs-2 fw-semibold">Sobre nós</h4>
         </div>
