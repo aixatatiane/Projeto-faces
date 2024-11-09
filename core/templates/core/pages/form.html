@@ -7,11 +7,24 @@
   <main class="container-fluid pt-5">
     <section class="row my-5 p-5 text-white bem-vindo">
       <div class="col-12">
-        <h1 class="text-center">Deletar face</h1>
+        <h1 class="text-center">
+          {% if acao == "cadastrar" %}
+            Cadastrar
+          {% else %}
+            Editar
+          {% endif %}
+            face
+        </h1>
         <form action="" method="post" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form.as_p }}
-          <button type="submit" class="btn bg-primary text-white">Cadastrar</button>
+          <button type="submit" class="btn bg-primary text-white">
+            {% if acao == "cadastrar" %}
+              Cadastrar
+            {% else %}
+              Editar
+            {% endif %}
+          </button>
         </form>
       </div>
     </section>

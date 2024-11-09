@@ -4,7 +4,7 @@
 {% include "core/partials/head.html" %}
 <body>
   {% include "core/partials/header.html" %}
-  <main class="container-fluid pt-5">
+  <main class="container-fluid d-flex flex-column  pt-5">
     <section class="row my-5 p-5 text-white bem-vindo">
       <div class="col-12">
         <h1 class="text-center">Bem-vindo(a)!</h1>
@@ -18,12 +18,12 @@
         </p>
       </div>
     </section>
-    <section class="row w-100 destaque">
+    <section class="row justify-content-between destaque">
       <div class="col-12 d-flex align-items-center justify-content-between">
         <h2 class="p-3 ps-5 fw-semibold">Destaque</h2>
         {% if request.user.is_authenticated %}
           <div class="">
-            <a href="{% url "core:cadastrar-face" %}" class="btn btn-primary">Cadastrar</a>
+            <a href="{% url "core:cadastrar-face" %}" class="btn btn-lg btn-primary text-white">Cadastrar</a>
           </div>
         {% endif %}
       </div>
@@ -31,7 +31,7 @@
         {% for i in faces %}
           <div class="col-10 col-md-3 mt-5 mt-lg-0 d-flex flex-column justify-content-end text-center">
             <h3 class="fw-semibold fs-3">{{ i.nome }}</h3>
-            <img src="{{ i.imagem.url }}" alt="">
+            <img src="{{ i.imagem.url }}" alt="" style="width: auto; height: 100%; object-fit: cover; overflow: hidden;">
             <a href="{% url 'core:faces-detalhe' i.id %}" class="text-decoration-none fw-semibold p-2 mb-2 bg-white text-azul fs-4 rounded-5" style="margin-top: -3.2rem;">Ver mais</a>
           </div>
         {% empty %}

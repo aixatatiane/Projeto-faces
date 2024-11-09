@@ -2,13 +2,24 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Face
 from .forms import FacesModelForm
 from django.contrib import messages
+from django.core.paginator import Paginator
+from django.utils import timezone
 
 def index(request):
     faces = Face.objects.all()[:3]
+
     return render(request, 'core/pages/index.html', { 'faces': faces })
 
 def faces(request):
-    faces = Face.objects.all()[:3]
+    objetos = Face.objects.all()
+    nome = request.GET.get('nome', '')
+
+    if nome:
+        objetos = objetos.filter(nome__icontains=nome)
+
+    paginator = Paginator(objetos, 5)
+    page_number = request.GET.get('page')
+    faces = paginator.get_page(page_number)
     return render(request, 'core/pages/faces.html', { 'faces': faces })
 
 def reflexao(request):
@@ -33,7 +44,7 @@ def cadastrar_face(request):
     else:
         form = FacesModelForm()
     
-    return render(request, 'core/pages/form.html', {'form': form})
+    return render(request, 'core/pages/form.html', {'form': form, 'acao': 'atualizar'})
 
 def atualizar_face(request, id):
     face = get_object_or_404(Face, id=id)
@@ -46,9 +57,14 @@ def atualizar_face(request, id):
             messages.success(request, 'Face atualizada com sucesso.')
             return redirect('core:home')
     else:
+        if face.data_nascimento:
+            face.data_nascimento = face.data_nascimento.strftime('%Y-%m-%d')
+        if face.data_falecimento:
+            face.data_falecimento = face.data_falecimento.strftime('%Y-%m-%d')
+        
         form = FacesModelForm(instance=face)
     
-    return render(request, 'core/pages/form.html', {'form': form, 'face': face})
+    return render(request, 'core/pages/form.html', {'form': form, 'face': face, 'acao': 'atualizar'})
 
 def deletar_face(request, id):
     face = get_object_or_404(Face, id=id)

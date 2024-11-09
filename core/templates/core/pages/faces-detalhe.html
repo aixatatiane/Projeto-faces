@@ -12,13 +12,13 @@
         <div class="container mt-4">
           <div class="row">
               <div class="d-flex justify-content-end me-1 mb-3 gap-2">
-                <a href="{% url "core:atualizar-face" face.id %}" class="btn btn-primary">Atualizar</a>
-                <a href="{% url "core:faces-deletar" face.id %}" class="btn btn-danger">Deletar</a>
+                <a href="{% url "core:atualizar-face" face.id %}" class="btn btn-lg btn-primary text-white">Atualizar</a>
+                <a href="{% url "core:faces-deletar" face.id %}" class="btn btn-lg btn-danger text-white">Deletar</a>
               </div>
               <div class="col-md-3">
                   <div class="sidebar">
                       <h2>História</h2>
-                      <img src="{{ face.imagem.url }}" alt="Machado de Assis" class="img-fluid mb-3">
+                      <img src="{{ face.imagem.url }}" alt="Machado de Assis" class="img-fluid mb-3" style="max-height: 300px; width: 100%;">
                       <div>
                           <strong>Ocupação:</strong><br>
                           {{ face.ocupacao }}

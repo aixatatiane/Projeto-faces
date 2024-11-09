@@ -6,26 +6,45 @@
   {% include "core/partials/header.html" %}
   <main class="container-fluid pt-5">
     <section class="faces-reconstruidas">
-      <div class="container">
+      <div class="container-fluid">
         <h1 class="text-white p-md-2 pb-md-4 me-0 bg-azul text-center">Faces Reconstruídas</h1>
         <div class="row justify-content-center justify-content-md-around card-faces mt-5">
-          <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center text-center">
-            <div class="padre-cicero-reconstruido mt-5 mt-lg-0"></div>
-            <h2 class="fw-semibold mt-3">Padre Cícero (1844-1934)</h2>
-            <a href="{% static 'img/Recriando_Imagens_Padre_Cicero_frontal_portrait._Hyper_realism 2.png' %}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
-            <a href="./detalhe.html" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
+          <div class="">
+            <form action="" method="GET" class="mb-4 pe-5">
+              <div class="input-group d-flex justify-content-end">
+                  <div class="form-outline">
+                    <input type="text" id="nome" name="nome" class="form-control p-2" placeholder="Filtrar por nome" />
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="background-color: #0b002c; border-color: #0b002c;">
+                    Filtrar
+                  </button>
+                </div>
+            </form>
           </div>
-          <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center text-center">
-            <div class="dandara-reconstruida mt-5 mt-lg-0"></div>
-            <h2 class="fw-semibold mt-3">Dandara dos Palmares (1654-1694)</h2>
-            <a href="{% static 'img/Recriando_Imagens_Dandara_dos_Palmares_frontal_portrait 2.png' %}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
-            <a href="./detalhe.html" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
-          </div>
-          <div class="col-10 col-md-5 col-xl-3 d-flex flex-column align-items-center text-center">
-            <div class="machado-de-assis-reconstruido mt-5 mt-lg-0"></div>
-            <h2 class="fw-semibold mt-3">Machado de Assis (1839-1908)</h2>
-            <a href="{% static 'img/Recriando_Imagens_Machado_de_Assis_frontal_portrait 2.png' %}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
-            <a href="./detalhe.html" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
+          {% for face in faces %}
+            <div class="col-10 col-md-5 col-xl-4 d-flex flex-column align-items-center text-center mb-5">
+              <img src="{{ face.imagem.url }}" alt="" style="height: 620px; width: 375px; max-width: 100%; object-fit: cover; overflow: hidden;">
+              <h2 class="fw-semibold mt-3">{{ face.nome }} (1844-1934)</h2>
+              <a href="{{ face.imagem.url }}" download class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">Salvar</a>
+              <a href="{% url "core:faces-detalhe" face.id %}" class="bg-azul text-white fw-semibold fs-3 p-3 rounded-3 text-decoration-none mt-3">História</a>
+            </div>
+          {% endfor %}
+          <div class=" ms-auto pt-3 ps-5">
+            <nav aria-label="Page navigation example" class="d-flex justify-content-end pe-5">
+              <ul class="pagination">
+                {% if faces.has_previous %}
+                  <li class="page-item"><a class="page-link text-white" href="?page={{ faces.previous_page_number }}" style="background-color: #0b002c;"><<</a></li>
+                {% endif %}
+          
+                {% for page in faces.paginator.page_range %}
+                  <li class="page-item"><a class="page-link text-white" href="?page={{ page }}" style="background-color: #0b002c;">{{ page }}</a></li>
+                {% endfor %}
+          
+                {% if faces.has_next %}
+                  <li class="page-item"><a class="page-link text-white" href="?page={{ faces.next_page_number }}" style="background-color: #0b002c;">>></a></li>
+                {% endif %}
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
